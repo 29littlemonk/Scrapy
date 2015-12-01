@@ -18,5 +18,10 @@ IMAGES_THUMBS = {
     'small': (50, 50),
     'big': (270, 270),
 }
+COOKIES_ENABLED = False
+DOWNLOADER_MIDDLEWARES = {
+        'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware' : None,
+        'meizitu.rotate_useragent.RotateUserAgentMiddleware' :400
+    }
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'meizitu (+http://www.yourdomain.com)'
